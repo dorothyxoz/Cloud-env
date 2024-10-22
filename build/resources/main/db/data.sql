@@ -25,16 +25,13 @@ VALUES
 
 INSERT INTO shop_product_tb (brand,name,price,count,product_image,gifticon_image)
 VALUES 
-	('컴포즈','바닐라 라떼',1234,3,'image.png','image2.png'),
-	('스타벅스','아이스 아메리카노',10000,4,'image2.png','image.png'),
-	('메가커피','바닐라 라떼',100,0,'image.png','image2.png'),
-	('파스쿠찌','바닐라 라떼',200,3,'image.png','image2.png'),
-	('빽다방','바닐라 라떼',300,3,'image.png','image2.png'),
-	('할리스','바닐라 라떼',400,3,'image.png','image2.png'),
-	('6번','바닐라 라떼',500,3,'image.png','image2.png'),
-	('7번','바닐라 라떼',600,3,'image.png','image2.png'),
-	('8번','바닐라 라떼',700,3,'image.png','image2.png'),
-	('9번','바닐라 라떼',800,3,'image.png','image2.png');
+	('bbq','후라이드 치킨',10000, 10, '/images/product/bbq.png','/images/gifticon/gifticon_1.png'),
+    	('pizamaru','피자',10000, 10, '/images/product/product_2.jpg','/images/gifticon/gifticon_2.png'),
+    	('melon cake','멜론케잌',10000, 10, '/images/product/product_3.jpg','/images/gifticon/gifticon_3.png'),
+    	('gs25','gs25만원상품권',10000, 10, '/images/product/product_4.jpg','/images/gifticon/gifticon_4.png'),
+    	('bugerKing','버거킹',10000, 10, '/images/product/product_6.jpg','/images/gifticon/gifticon_6.png'),
+    	('fanta','환타 오렌지맛',10000, 10, '/images/product/product_7.jpg','/images/gifticon/gifticon_7.png'),
+    	('coffee','스타박스 아메리카노',10000, 10, '/images/product/product_8.jpg','/images/gifticon/gifticon_8.png');
 
 
 insert into mileage_tb(mileage_date,save_mileage,expiration_date,balance,member_id)
@@ -1153,15 +1150,6 @@ VALUES(1, 1),
 INSERT INTO baggage_request_tb(amount, br_id, member_id)
 	VALUES (1, 1, 'abc'),
 	(1, 2, 'abc');	
-
--- 추천여행지 샘플 데이터
-INSERT INTO recommend_board_tb
-(title, user_id, content, view_count, origin_name, file_name)
-VALUES
-('제목', 'abc', '게시글내용', 0, '이미지이름', '이미지이름'),
-('제목2', 'a123', '게시글내용2', 0, '이미지이름', '이미지이름'),
-('제목3', 'a123', '게시글내용3', 0, '이미지이름', '이미지이름'),
-('제목4', 'abc', '게시글내용4', 0, '이미지이름', '이미지이름');
 
 -- 좋아요 샘플 데이터
 INSERT INTO like_heart_tb (board_id, user_id)

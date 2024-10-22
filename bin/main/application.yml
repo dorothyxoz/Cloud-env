@@ -1,14 +1,18 @@
+
 server:
   port: 443 # 포트 번호
   ssl:
     enabled: true
-    key-store: src/main/resources/bootsecurity.p12  # SSL 인증서 경로
-    key-store-password: 123456  # keystore 비밀번호
+    key-store: classpath:AN-keystore.p12  # SSL 인증서 경로
+    key-store-password: 1234  # keystore 비밀번호
     keyStoreType: PKCS12  # keystore 형식 (PKCS12 또는 JKS)
-    keyAlias: bootsecurity  # 인증서 별칭
+    keyAlias: aliasname  # 인증서 별칭
   http:
     port: 80
-  servlet: 
+  servlet:
+    session:
+      cookie:
+        http-only: false 
     encoding:
       charset: utf-8 
       force: true
@@ -40,7 +44,7 @@ spring:
       resolve-lazily: 'true'
       max-file-size: 20MB #최대 20MB()
   datasource: # DB 설정 (MYSQL으로 마이그레이션하기) ***
-    url: jdbc:mysql://localhost:3306/airline_db?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://10.0.4.15:3306/airline_db?serverTimezone=Asia/Seoul
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root # 유저 이름
     password: 1234 # 비밀번호 (비워두면 비밀번호 X)
@@ -56,6 +60,11 @@ spring:
   output: 
     ansi: # 쿼리문 표준
       enabled: always
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
  
 mybatis:
   mapper-locations:         # **.xml : 해당 경로 아래 모든 xml 파일

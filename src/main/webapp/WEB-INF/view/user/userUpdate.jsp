@@ -103,13 +103,13 @@ input[type=text]:focus, input[type=password]:focus {
 <main>
 	<div>
 		<div>
-			<h2 class="page--title">회원정보 변경</h2>
+			<h2 class="page--title">???? ??</h2>
 			<hr>
 			<br>
 		</div>
 
 		<div>
-			<h3>기본 정보</h3>
+			<h3>?? ??</h3>
 		</div>
 		<form action="/userUpdate" method="post">
 			<div class="userUpdate--all--wrap">
@@ -117,7 +117,7 @@ input[type=text]:focus, input[type=password]:focus {
 					<c:choose>
 						<c:when test="${userFormDto != null}">
 							<div class="join--id--class">
-								아이디 <br> <input type="text" name="id" value="${userFormDto.id}" readonly="readonly">
+								??? <br> <input type="text" name="id" value="${userFormDto.id}" readonly="readonly">
 								<div class="validation--check">
 									<c:if test="${idValid != null}">
 							${idValid}
@@ -127,7 +127,7 @@ input[type=text]:focus, input[type=password]:focus {
 						</c:when>
 						<c:otherwise>
 							<div class="userUpdate--id--wrap">
-								아이디 <br> <input type="text" name="id" id="member--id" value="${principal.id}" readonly="readonly">
+								??? <br> <input type="text" name="id" id="member--id" value="${principal.id}" readonly="readonly">
 							</div>
 						</c:otherwise>
 					</c:choose>
@@ -135,7 +135,7 @@ input[type=text]:focus, input[type=password]:focus {
 					<c:choose>
 						<c:when test="${userFormDto != null}">
 							<div class="userUpdate--korName">
-								한글 이름 <br> <input type="text" name="korName" required="required" value="${userFormDto.korName}">
+								?? ?? <br> <input type="text" name="korName" required="required" value="${userFormDto.korName}">
 								<div class="validation--check">
 									<c:if test="${korNameValid != null}">
 							${korNameValid}
@@ -145,7 +145,7 @@ input[type=text]:focus, input[type=password]:focus {
 						</c:when>
 						<c:otherwise>
 							<div class="userUpdate--korName">
-								한글 이름 <br> <input type="text" name="korName" value="${memberById.korName}">
+								?? ?? <br> <input type="text" name="korName" value="${memberById.korName}">
 							</div>
 						</c:otherwise>
 					</c:choose>
@@ -153,7 +153,7 @@ input[type=text]:focus, input[type=password]:focus {
 					<c:choose>
 						<c:when test="${userFormDto != null}">
 							<div class="userUpdate--engName">
-								영어 이름 <br> <input type="text" name="engName" required="required" value="${userFormDto.engName}">
+								?? ?? <br> <input type="text" name="engName" required="required" value="${userFormDto.engName}">
 								<div class="validation--check">
 									<c:if test="${engNameValid != null}">
 							${engNameValid}
@@ -163,7 +163,7 @@ input[type=text]:focus, input[type=password]:focus {
 						</c:when>
 						<c:otherwise>
 							<div class="userUpdate--engName">
-								영어 이름 <br> <input type="text" name="engName" value="${memberById.engName}">
+								?? ?? <br> <input type="text" name="engName" value="${memberById.engName}">
 							</div>
 						</c:otherwise>
 					</c:choose>
@@ -173,7 +173,7 @@ input[type=text]:focus, input[type=password]:focus {
 					<c:choose>
 						<c:when test="${userFormDto != null}">
 							<div class="userUpdate--birthDate">
-								생년월일 <br> <input type="text" id="datepicker" name="birthDate" readonly="readonly" value="${userFormDto.birthDate}">
+								???? <br> <input type="text" id="datepicker" name="birthDate" readonly="readonly" value="${userFormDto.birthDate}">
 								<div class="validation--check">
 									<c:if test="${birthDateValid != null}">
 							${birthDateValid}
@@ -183,7 +183,7 @@ input[type=text]:focus, input[type=password]:focus {
 						</c:when>
 						<c:otherwise>
 							<div class="userUpdate--birthDate">
-								생년월일<br> <input type="text" id="datepicker" name="birthDate" value="${memberById.birthDate}" readonly="readonly">
+								????<br> <input type="text" id="datepicker" name="birthDate" value="${memberById.birthDate}" readonly="readonly">
 							</div>
 						</c:otherwise>
 					</c:choose>
@@ -191,8 +191,8 @@ input[type=text]:focus, input[type=password]:focus {
 					<c:choose>
 						<c:when test="${userFormDto != null}">
 							<div class="userUpdate--gender">
-								성별 <label> <input type="radio" name="gender" value="M" required="required" class="gender--input"> 남
-								</label> <label> <input type="radio" name="gender" value="F" class="gender--input"> 여
+								?? <label> <input type="radio" name="gender" value="M" required="required" class="gender--input"> ?
+								</label> <label> <input type="radio" name="gender" value="F" class="gender--input"> ?
 								</label>
 								<div class="validation--check">
 									<c:if test="${genderValid != null}">
@@ -203,8 +203,8 @@ input[type=text]:focus, input[type=password]:focus {
 						</c:when>
 						<c:otherwise>
 							<div class="userUpdate--gender">
-								성별 <label> <input type="radio" name="gender" value="M" class="gender--input"> 남
-								</label> <label> <input type="radio" name="gender" value="F" class="gender--input"> 여
+								?? <label> <input type="radio" name="gender" value="M" class="gender--input"> ?
+								</label> <label> <input type="radio" name="gender" value="F" class="gender--input"> ?
 								</label>
 							</div>
 						</c:otherwise>
@@ -216,7 +216,7 @@ input[type=text]:focus, input[type=password]:focus {
 					<c:choose>
 						<c:when test="${userFormDto != null}">
 							<div class="userUpdate--phoneNumber">
-								휴대전화<br> <input type="text" name="phoneNumber" placeholder="예:010-0000-0000" required="required" value="${userFormDto.phoneNumber}">
+								????<br> <input type="text" name="phoneNumber" placeholder="?:010-0000-0000" required="required" value="${userFormDto.phoneNumber}">
 								<div class="validation--check">
 									<c:if test="${phoneNumberValid != null}">
 							${phoneNumberValid}
@@ -226,7 +226,7 @@ input[type=text]:focus, input[type=password]:focus {
 						</c:when>
 						<c:otherwise>
 							<div class="userUpdate--phoneNumber">
-								휴대전화 <br> <input type="text" name="phoneNumber" placeholder="예:010-0000-0000" value="${memberById.phoneNumber}">
+								???? <br> <input type="text" name="phoneNumber" placeholder="?:010-0000-0000" value="${memberById.phoneNumber}">
 							</div>
 						</c:otherwise>
 					</c:choose>
@@ -234,7 +234,7 @@ input[type=text]:focus, input[type=password]:focus {
 					<c:choose>
 						<c:when test="${userFormDto != null}">
 							<div class="userUpdate--email">
-								이메일 <br> <input type="text" name="email" required="required" value="${userFormDto.email}">
+								??? <br> <input type="text" name="email" required="required" value="${userFormDto.email}">
 								<div class="validation--check">
 									<c:if test="${emailValid != null}">
 							${emailValid}
@@ -244,7 +244,7 @@ input[type=text]:focus, input[type=password]:focus {
 						</c:when>
 						<c:otherwise>
 							<div class="userUpdate--email">
-								이메일 <br> <input type="text" name="email" value="${memberById.email}">
+								??? <br> <input type="text" name="email" value="${memberById.email}">
 							</div>
 						</c:otherwise>
 					</c:choose>
@@ -252,8 +252,8 @@ input[type=text]:focus, input[type=password]:focus {
 					<c:choose>
 						<c:when test="${userFormDto != null}">
 							<div class="userUpdate--address">
-								주소 <input type="button" class="address--btn" onclick="execDaumPostcode()" value="주소 찾기" required="required"> <br> <input type="text" id="address" name="address" placeholder="주소"
-									required="required" value="${userFormDto.address}"> <br> <input type="text" id="detailAddress" placeholder="상세주소">
+								?? <input type="button" class="address--btn" onclick="execDaumPostcode()" value="?? ??" required="required"> <br> <input type="text" id="address" name="address" placeholder="??"
+									required="required" value="${userFormDto.address}"> <br> <input type="text" id="detailAddress" placeholder="????">
 								<div class="validation--check">
 									<c:if test="${addressValid != null}">
 							${addressValid}
@@ -263,8 +263,8 @@ input[type=text]:focus, input[type=password]:focus {
 						</c:when>
 						<c:otherwise>
 							<div class="userUpdate--address">
-								주소 <input type="button" class="address--btn" onclick="execDaumPostcode()" value="주소 찾기"> <br> <input type="text" id="address" name="address" value="${memberById.address}"
-									placeholder="주소"><br> <input type="text" id="detailAddress" placeholder="상세주소">
+								?? <input type="button" class="address--btn" onclick="execDaumPostcode()" value="?? ??"> <br> <input type="text" id="address" name="address" value="${memberById.address}"
+									placeholder="??"><br> <input type="text" id="detailAddress" placeholder="????">
 							</div>
 						</c:otherwise>
 					</c:choose>
@@ -274,7 +274,7 @@ input[type=text]:focus, input[type=password]:focus {
 				</div>
 			</div>
 			<div class="userUpdate--btn--wrap">
-				<button type="submit" class="btn btn--primary" id="join--btn" onclick="return confirm('정말 수정하시겠습니까?')">회원정보 변경</button>
+				<button type="submit" class="btn btn--primary" id="join--btn" onclick="return confirm('?? ?????????')">???? ??</button>
 			</div>
 
 		</form>
@@ -282,6 +282,6 @@ input[type=text]:focus, input[type=password]:focus {
 
 	<script src="/js/userUpdate.js"></script>
 </main>
-<input type="hidden" name="menuName" id="menuName" value="회원정보 변경">
+<input type="hidden" name="menuName" id="menuName" value="???? ??">
 
 <%@ include file="/WEB-INF/view/layout/footer.jsp"%>

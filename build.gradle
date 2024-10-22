@@ -19,6 +19,9 @@ repositories {
 }
 
 dependencies {
+    //자동 재빌드
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
+
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper' // JSP
     implementation 'javax.servlet:jstl' // JSTL
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
@@ -38,6 +41,7 @@ dependencies {
 	//implementation 'org.springframework.boot:spring-boot-starter-mail:2.7.1'
 	implementation 'org.springframework:spring-context-support'
 	implementation group: 'net.nurigo', name: 'javaSDK', version: '2.2'
+	implementation 'org.springframework.boot:spring-boot-devtools'
 	
 	// 대용량 파일 처리
     implementation 'commons-io:commons-io:2.6'
